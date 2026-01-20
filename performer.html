@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title> Invisible performer (2025) </title>
+
+  <meta name="description" content="Invisible performer, Jeong Irang, 2025">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <button class="menu-btn" aria-label="menu">
+  <span></span>
+  <span></span>
+  <span></span>
+ </button>
+
+ </header>
+
+ <nav class="side-menu">
+  <ul>
+   <li><a href="index.html">Home</a></li>
+   <li><a href="andata.html">Projects</a></li>
+   <li><a href="works.html">Works</a></li>
+  </ul>
+ </nav>
+
+ <script>
+   const menuBtn = document.querySelector('.menu-btn');
+   const sideMenu = document.querySelector('.side-menu');
+
+   menuBtn.addEventListener('click', () => {
+    sideMenu.classList.toggle('open');
+   });
+ </script>
+
+<main>
+
+ <img src="assets/pf1.jpg" alt="pf1" class="pf1">
+
+ <p class="pf-title"> <strong> Invisible Performer </strong> </p>
+
+ <p class="pf-intro1"> 2025 </p>
+ <p class="pf-intro2"> Knife marks, charcoal, blood on the wall </p>
+ <p class="pf-intro3"> Dimensions veriable </p>
+ <p class="pf-intro4"> first installation : 2025. 06. 04 </p>
+ <p class="pf-intro5"> second installation : 2025. 06. 19 - 2025. 06. 21 </p>
+
+ <img src="assets/pf2.jpg" alt="pf2" class="pf2">
+ <img src="assets/pf4.heic" alt="pf4" class="pf4">
+ <img src="assets/pf3.jpg" alt="pf3" class="pf3">
+ <img src="assets/pf5.jpg" alt="pf5" class="pf5">
+
+
+ <section class="installation-slider">
+  <button class="pf-arrow left" aria-label="previous"> ‹ </button>
+
+  <div class="slider-window">
+   <div class="slider-track">
+ <img src="assets/pf6.jpg" alt="pf6" />
+ <img src="assets/pf7.jpg" alt="pf7" />
+ <img src="assets/pf8.jpg" alt="pf8" />
+ <img src="assets/pf9.jpg" alt="pf9" />
+   </div>
+  </div>
+
+  <button class="pf-arrow right" aria-label="next"> › </button>
+ </section>
+
+<script>
+  const track = document.querySelector('.slider-track');
+  const slides = document.querySelectorAll('.slider-track img');
+  const prevBtn = document.querySelector('.pf-arrow.left');
+  const nextBtn = document.querySelector('.pf-arrow.right');
+
+  let index = 0;
+  const total = slides.length;
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % total;
+    updateSlider();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    updateSlider();
+  });
+</script>
+
+
+
+</main>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title> Drawing a person (2025) </title>
+
+  <meta name="description" content="Drawing a person, Jeong Irang, 2025">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <header class="person-page">
+
+ <button class="menu-btn" aria-label="menu">
+  <span></span>
+  <span></span>
+  <span></span>
+ </button>
+
+ </header>
+
+ <nav class="side-menu">
+  <ul>
+   <li><a href="index.html">Home</a></li>
+   <li><a href="andata.html">Projects</a></li>
+   <li><a href="works.html">Works</a></li>
+  </ul>
+ </nav>
+
+ <script>
+   const menuBtn = document.querySelector('.menu-btn');
+   const sideMenu = document.querySelector('.side-menu');
+
+   menuBtn.addEventListener('click', () => {
+    sideMenu.classList.toggle('open');
+   });
+ </script>
+
+
+<main>
+
+
+ <img src="assets/person1.jpg" alt="person1" class="person1">
+ <p class="person-title"><strong>Andata: 사람을 그림</strong></p>
+
+ <p class="person-intro">Video installation in 2025, by Jeong Irang <br> 15 min 56 sec</p>
+ <p class="person-intro2">Single channel video, sound, drywall</p>
+
+ <img src="assets/person2.jpg" alt="person2" class="person2">
+ <img src="assets/person3.jpg" alt="person3" class="person3">
+ <img src="assets/person4.jpg" alt="person4" class="person4">
+ <img src="assets/person5.jpg" alt="person5" class="person5">
+ <img src="assets/person6-2.jpg" alt="person6-2" class="person6-2">
+ <img src="assets/person7.jpg" alt="person7" class="person7">
+
+ <div class="video-wrapper">
+  <iframe
+   src="https://www.youtube.com/embed/gE2eO8otSmw?rel=0&modestbranding=1"
+   title="Andata: Drawing a person (2025)"
+   frameborder="0"
+   allowfullscreen>
+  </iframe>
+ </div>
+
+ <p class="person-outro">With many others</p>
+
+ <p class="person-photo">First installation : 2025. 12. 19 - 2025. 12. 21</p>
+
+
+ <section class="installation-slider">
+  <button class="arrow left" aria-label="previous"> ‹ </button>
+
+  <div class="slider-window">
+   <div class="slider-track">
+    <img src="assets/person-install1.jpg" alt="install1" />
+    <img src="assets/person-install2.jpg" alt="install2" />
+    <img src="assets/person-install3.jpg" alt="install3" />
+    <img src="assets/person-install4.jpg" alt="install4" />
+    <img src="assets/person-install5.jpg" alt="install5" />
+    <img src="assets/person-install6.jpg" alt="install6" />
+    <img src="assets/person-install7.jpg" alt="install7" />
+    <img src="assets/person-install8.jpg" alt="install8" />
+   </div>
+  </div>
+
+  <button class="arrow right" aria-label="next"> › </button>
+ </section>
+
+<script>
+  const track = document.querySelector('.slider-track');
+  const slides = document.querySelectorAll('.slider-track img');
+  const prevBtn = document.querySelector('.arrow.left');
+  const nextBtn = document.querySelector('.arrow.right');
+
+  let index = 0;
+  const total = slides.length;
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % total;
+    updateSlider();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    updateSlider();
+  });
+</script>
+
+ <a class="return" href="andata.html#andata-list">
+  Return to projects
+ </a>
+
+</main>
+
+
+</body>
+</html>
+
+
+
+
+

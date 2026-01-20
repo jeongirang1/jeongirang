@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title> Drawing out the back of a painting: Movements (2025) </title>
+
+  <meta name="description" content="DOBP: Movements, Jeong Irang, 2025">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <header class="move-page">
+
+ <button class="menu-btn" aria-label="menu">
+  <span></span>
+  <span></span>
+  <span></span>
+ </button>
+
+ </header>
+
+ <nav class="side-menu">
+  <ul>
+   <li><a href="index.html">Home</a></li>
+   <li><a href="andata.html">Projects</a></li>
+   <li><a href="works.html">Works</a></li>
+  </ul>
+ </nav>
+
+ <script>
+   const menuBtn = document.querySelector('.menu-btn');
+   const sideMenu = document.querySelector('.side-menu');
+
+   menuBtn.addEventListener('click', () => {
+    sideMenu.classList.toggle('open');
+   });
+ </script>
+
+
+<main>
+
+ <img src="assets/move0-1.jpg" alt="move0-1" class="move0-1">
+
+ <img src="assets/move2.jpg" alt="move2" class="move2">
+ <img src="assets/move0.jpg" alt="move0" class="move0">
+ <img src="assets/move4.jpg" alt="move4" class="move4">
+
+
+ <p class="move-title"><strong> 그림의 뒤를 꺼내오기: 움직임 </strong></p>
+
+ <p class="move-intro1">Pigmented wheat paste, liquid glue and xuan paper on jangji</p>
+ <p class="move-intro2">Dimensions variable</p>
+ <p class="move-intro3">2025</p>
+
+
+ <img src="assets/move5.jpg" alt="move5" class="move5">
+
+ 
+ <a class="return" href="andata.html#andata-list">
+  Return to projects
+ </a>
+
+
+ <section class="bg-carousel">
+  <img src="assets/move6.jpg" alt="move6 background" class="bg-img" />
+
+  <div class="overlay">
+    <button class="nav prev" type="button" aria-label="Previous">‹</button>
+
+    <img id="overlayImage" src="assets/move7.jpg" alt="move7" class="overlay-img" />
+
+    <button class="nav next" type="button" aria-label="Next">›</button>
+  </div>
+ </section>
+
+
+</main>
+
+ <script>
+  const overlayImages = [
+    "assets/move7.jpg",
+    "assets/move8.jpg",
+    "assets/move11.jpg",
+    "assets/move12.jpg",
+    "assets/move13.jpg"
+  ];
+
+  let i = 0;
+
+  const img = document.getElementById("overlayImage");
+  const prev = document.querySelector(".nav.prev");
+  const next = document.querySelector(".nav.next");
+
+  function render() {
+    img.style.opacity = 0;
+
+    setTimeout(() => {
+      img.src = overlayImages[i];
+      img.alt = overlayImages[i].split("/").pop().replace(".jpg", "");
+      img.style.opacity = 1;
+    }, 180);
+  }
+
+  prev.addEventListener("click", () => {
+    i = (i - 1 + overlayImages.length) % overlayImages.length;
+    render();
+  });
+
+  next.addEventListener("click", () => {
+    i = (i + 1) % overlayImages.length;
+    render();
+  });
+
+  render();
+ </script>
+
+
+</body>
+</html>
+
+
+
