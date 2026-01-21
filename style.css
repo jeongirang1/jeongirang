@@ -476,6 +476,11 @@ body{
   margin: 30px auto 40px auto;
 }
 
+@media {
+  .notice {
+    font-size: 10px;
+  }
+
 /* ===============================
    WORK: PERSON
 ================================ */
