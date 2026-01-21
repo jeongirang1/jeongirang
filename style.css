@@ -1035,9 +1035,11 @@ audio {
 }
 
 @media { 
-   .andata-text p {
-  font-size: 10px;
-}
+
+   .andata-intro { font-size: 10px; }
+  
+   .andata-text p { font-size: 10px; }
+  
 }
 
 
