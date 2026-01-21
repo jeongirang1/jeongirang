@@ -211,6 +211,9 @@ body{
   .menu-btn span {
     height: 1px;         
   }
+
+  .email { font-size: 11px; }
+  
 }
 
 
