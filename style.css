@@ -833,7 +833,7 @@ audio {
 .carousel-btn.prev { left: 5%; }
 .carousel-btn.next { right: 5%; }
 
-@media
+@media {
 
 .move-title { 
   font-size: 12px; 
@@ -851,6 +851,8 @@ audio {
 }
 
 .move0-1 { margin-bottom: 40px; }
+
+}
 
 /* ===============================
    WORK: IDEA
