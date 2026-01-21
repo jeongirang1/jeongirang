@@ -893,10 +893,10 @@ audio {
 .idea7 { margin: 70px 0 30px 0; }
 
 
-@media
+@media {
 
 .idea-title {
-  font-size: 13px; 
+  font-size: 12px; 
   opacity: 0.6;
 }
 
@@ -911,6 +911,8 @@ audio {
 .idea5 { margin: 70px 0 30px 0; }
 
 .idea7 { margin: 90px 0 20px 0; }
+
+}
 
 
 /* ===============================
