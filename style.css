@@ -836,8 +836,8 @@ audio {
 @media
 
 .move-title { 
-  font-size: 13px; 
-  opacity: 0.6;
+  font-size: 12px; 
+  opacity: 0.55;
 }
 
 .move-intro1, .move-intro2, .move-intro3 {
